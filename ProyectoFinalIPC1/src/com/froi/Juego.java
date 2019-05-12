@@ -252,4 +252,12 @@ public class Juego {
         cda.setVisible(true);
     }
 
+    public void cerrarCreacionDeArma(){
+        cda.setVisible(false);
+    }
+
+    public void agregarArmaATienda(String nombre, double daño, double punteria, double precio){
+        armasEnVenta.add(new Arma(nombre, daño, punteria, precio));
+    }
+
 }

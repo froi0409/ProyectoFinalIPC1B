@@ -8,8 +8,9 @@ public class Persona {
     private int cantVeh = 0, edad, punteo;
     private int cantTanques = 0, cantAviones = 0, cantBoots = 0;
     private int XP = 0, nivel = 1, siguienteNivel = 2, XPnextLevel = 5;
-    private int dinero = 100;
+    private double dinero = 200;
     private ArrayList<Vehiculo> veh = new ArrayList<Vehiculo>();
+    private ArrayList<Arma> arm = new ArrayList<Arma>();
 
     public Persona (String nombres, String apellidos, int edad){
 
@@ -57,6 +58,10 @@ public class Persona {
 
     }
 
+    public void darArmaAVehiculo(int posV, Arma ar){
+
+    }
+
     public int getCantidadDeVehiculos(){
         return veh.size();
     }
@@ -69,7 +74,7 @@ public class Persona {
         this.dinero = dinero;
     }
 
-    public int getDinero() {
+    public double getDinero() {
         return dinero;
     }
 

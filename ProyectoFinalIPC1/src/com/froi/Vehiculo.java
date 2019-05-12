@@ -39,4 +39,8 @@ public class Vehiculo{
     public int getTipo() {
         return tipo;
     }
+
+    public void setArma(Arma arma) {
+        this.arma = arma;
+    }
 }
