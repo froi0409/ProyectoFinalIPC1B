@@ -13,7 +13,7 @@ public class Ventana extends JFrame {
     private JPanel panelInicio = new JPanel();
     private JPanel panelOpciones = new JPanel();
     private JPanel panelSeleccionDeTablero = new JPanel();
-    private JButton unJugador, dosJugadores, opciones, salir;
+    private JButton unJugador, dosJugadores, cargarPartida, opciones, salir;
     private JButton crearJugador, crearVehiculo, crearArma, tienda, regresar;
     private JButton esce1, esce2, esce3;
     private JLabel labelInicio, labelOpciones, labelSelecTab;
@@ -95,7 +95,7 @@ public class Ventana extends JFrame {
 
         //Configuración de botón unJugador
         unJugador = new JButton("UN JUGADOR"); //Botón 1
-        unJugador.setBounds(100, 100, 400, 25);
+        unJugador.setBounds(100, 85, 400, 25);
         panelInicio.add(unJugador);
 
         //Oyente de acción de botón unJugador
@@ -122,7 +122,7 @@ public class Ventana extends JFrame {
 
         //Configuración de botón dosJugadores
         dosJugadores = new JButton("DOS JUGADORES"); //Botón 2
-        dosJugadores.setBounds(100, 130, 400, 25);
+        dosJugadores.setBounds(100, 115, 400, 25);
         panelInicio.add(dosJugadores);
 
         //Oyente de acción de botón dosJugadores
@@ -147,9 +147,24 @@ public class Ventana extends JFrame {
         });
 
 
+
+        //configuracion de botón cargarPartida
+        cargarPartida = new JButton("CARGAR PARTIDA");
+        cargarPartida.setBounds(100, 145, 400, 25);
+        panelInicio.add(cargarPartida);
+
+        //Oyente de acción de botón cargar partida
+        cargarPartida.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+
         //Configuración de botón opciones
         opciones = new JButton("OPCIONES"); //Botón 4
-        opciones.setBounds(100, 160, 400, 25);
+        opciones.setBounds(100, 175, 400, 25);
         panelInicio.add(opciones);
 
         //Oyente de acción Botón Opciones
@@ -163,7 +178,7 @@ public class Ventana extends JFrame {
 
         //Configuración del botón salir
         salir = new JButton("SALIR"); //Botón 5
-        salir.setBounds(100, 190, 400, 25);
+        salir.setBounds(100, 205, 400, 25);
         panelInicio.add(salir);
 
         //Oyente de acción botón Salir
@@ -230,13 +245,31 @@ public class Ventana extends JFrame {
         crearArma.setBounds(100, 160, 400, 25);
         panelOpciones.add(crearArma);
 
-        //
+        //oyente de acción botón crearArma
+        crearArma.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                j1.abrirCreacionDeArma();
+                j1.cerrarVentanaInicio();
+            }
+        });
 
+        //configuracion de botón tienda
+        tienda = new JButton("TIENDA");
+        tienda.setBounds(100, 190, 198, 25);
+        panelOpciones.add(tienda);
 
+        //oyente de accion botón tienda
+        tienda.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
 
         //configuración de botón regresar
         regresar = new JButton("REGRESAR");
-        regresar.setBounds(100, 190, 400, 25);
+        regresar.setBounds(302, 190, 198, 25);
         panelOpciones.add(regresar);
 
         //oyente de accion de botón regresar
@@ -324,7 +357,7 @@ public class Ventana extends JFrame {
 
 
         //configuración de boton regresar
-        regresar = new JButton("REGRESAR");
+        regresar = new JButton("CANCELAR");
         regresar.setBounds(300, 145, 200, 55);
         panelSeleccionDeTablero.add(regresar);
 
@@ -339,20 +372,6 @@ public class Ventana extends JFrame {
             }
         });
 
-
-
-        //configuracion de botón tienda
-        tienda = new JButton("TIENDA");
-        tienda.setBounds(100, 205, 400, 25);
-        panelSeleccionDeTablero.add(tienda);
-
-        //oyente de accion botón tienda
-        tienda.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
 
 
     }

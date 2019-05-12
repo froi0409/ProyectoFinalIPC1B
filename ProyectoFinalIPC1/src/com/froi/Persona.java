@@ -7,6 +7,7 @@ public class Persona {
     private String nombres, apellidos;
     private int cantVeh = 0, edad, punteo;
     private int cantTanques = 0, cantAviones = 0, cantBoots = 0;
+    private int XP = 0, nivel = 1, siguienteNivel = 2, XPnextLevel = 5;
     private int dinero = 100;
     private ArrayList<Vehiculo> veh = new ArrayList<Vehiculo>();
 

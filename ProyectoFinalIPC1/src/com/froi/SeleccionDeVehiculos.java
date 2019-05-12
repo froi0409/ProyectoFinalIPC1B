@@ -20,7 +20,7 @@ public class SeleccionDeVehiculos extends JFrame {
 
         cambios = new int[j1.getVehiculosTotales()];
 
-        int x = 600, y = 115;
+        int x = 600, y = 85;
         this.j1 = j1;
         panel();
 
@@ -89,68 +89,55 @@ public class SeleccionDeVehiculos extends JFrame {
                         }
                     }
 
+                    agregar();
+
                 }
             });
         }
 
 
-        //Configuracion botón finalizar
-        finalizar = new JButton("FINALIZAR");
-        finalizar.setBounds(100, y, 400, 25);
-        panelSeleccion.add(finalizar);
-
-        //oyente de accion boton finalizar
-        finalizar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                if (cont >= 3) {
-
-                    for (int i = 0; i < cont; i++) {
-
-                        j1.setVG((j1.getNumeroGamers() - 1), cambios[i]);
-
-                    }
-                    int cont2 = 0;
-                    for (int i = 0; i < cont; i++) {
-
-                        j1.desplazarVehiculo(cambios[i] - cont2);
-                        cont2++;
-
-                    }
-
-                    System.out.println(j1.getVehiculosTotales());
-
-                    if ((j1.getCantVehi(j1.getNumeroGamers() - 1) >= 3)) {
-
-                        System.out.println("VEHICULOS ESTABLECIDOS!!!");
-
-                        if (j1.getTipoCreacion() == 0) {
-
-                            JOptionPane.showMessageDialog(null, "¡JUGADOR CREADO CON EXITO!");
-                            j1.jugar();
-                            j1.cerrarSeleccionDeVehiculos();
-                        }
-                    }
-
-                }
-                else {
-
-                    JOptionPane.showMessageDialog(null, "El jugador debe tener un minimo de 3 vehiculos");
-
-                }
-            }
-        });
-
     }
 
     private void label(){
-        labelSeleccion = new JLabel("Seleccione los vehículos que le asignara al jugador:");
+        labelSeleccion = new JLabel("Seleccione 3 vehículos (estos serán asignados al jugador");
         labelSeleccion.setOpaque(true);
         labelSeleccion.setBounds(100, 20, 400, 15);
         labelSeleccion.setFont(new Font("default", Font.PLAIN, 15));
         labelSeleccion.setHorizontalAlignment(SwingConstants.CENTER);
         panelSeleccion.add(labelSeleccion);
+    }
+
+    private void agregar(){
+        if (cont == 3) {
+
+            for (int i = 0; i < cont; i++) {
+
+                j1.setVG((j1.getNumeroGamers() - 1), cambios[i]);
+
+            }
+            int cont2 = 0;
+            for (int i = 0; i < cont; i++) {
+
+                j1.desplazarVehiculo(cambios[i] - cont2);
+                cont2++;
+
+            }
+
+            System.out.println(j1.getVehiculosTotales());
+
+            if ((j1.getCantVehi(j1.getNumeroGamers() - 1) >= 3)) {
+
+                System.out.println("VEHICULOS ESTABLECIDOS!!!");
+
+                if (j1.getTipoCreacion() == 0) {
+
+                    JOptionPane.showMessageDialog(null, "¡JUGADOR CREADO CON EXITO!");
+                    j1.jugar();
+                    j1.cerrarSeleccionDeVehiculos();
+                }
+            }
+
+        }
     }
 
     public void setPosicion(int posicion) {

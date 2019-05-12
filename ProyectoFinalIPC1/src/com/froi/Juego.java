@@ -11,6 +11,7 @@ public class Juego {
     private Tablero t1;
     private CreacionDeJugador c1 = new CreacionDeJugador(this);
     private CreacionDeVehiculo cv1 = new CreacionDeVehiculo(this, tipoCreacion);
+    private CreacionDeArma cda;
     private SeleccionDeVehiculos sv1;
     private SeleccionVehCombate svc;
     private SeleccionDeJugador sj1;
@@ -243,6 +244,12 @@ public class Juego {
         svc = new SeleccionVehCombate(this);
         svc.setVisible(true);
         svc.setJugador(jugador);
+    }
+
+    //ARMAS
+    public void abrirCreacionDeArma(){
+        cda = new CreacionDeArma(this);
+        cda.setVisible(true);
     }
 
 }
