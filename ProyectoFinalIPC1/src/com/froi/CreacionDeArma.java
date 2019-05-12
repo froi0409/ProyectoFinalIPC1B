@@ -10,10 +10,9 @@ public class CreacionDeArma extends JFrame {
     private Juego j1;
     private JPanel panelArma = new JPanel();
     private JTextField nombre;
-    private JButton agregarATienda, tienda, sumaDaño, sumaPunteria, restaDaño, restaPunteria;
-    private JLabel ingresoNombre, daño, punteria, precio;
-    private double dañoTotal = 0, punteriaTotal = 0;
-    private double precioDaño = 0, precioPunteria = 0, precioTotal = 0;
+    private JButton agregarATienda, sumaDaño, sumaPunteria, restaDaño, restaPunteria;
+    private JLabel ingresoNombre, daño, punteria, precio, principal;
+    private double dañoTotal = 0, punteriaTotal = 0, precioTotal = 0;
 
     public CreacionDeArma(Juego j1){
 
@@ -145,6 +144,13 @@ public class CreacionDeArma extends JFrame {
     }
 
     private void labels() {
+
+        principal = new JLabel("CREACIÓN DE ARMA");
+        principal.setOpaque(true);
+        principal.setBounds(100, 20, 400, 25);
+        principal.setFont(new Font("default", Font.PLAIN, 25));
+        principal.setHorizontalAlignment(SwingConstants.CENTER);
+        panelArma.add(principal);
 
         ingresoNombre = new JLabel("Ingrese Nombre del Arma");
         ingresoNombre.setOpaque(true);

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Juego {
 
-    private int rangox, rangoy, modoDeJuego, numeroGamers = 0, vehiculosTotales = 0, tipoCreacion, personasEnCombate = 0;
+    private int rangox, rangoy, modoDeJuego, numeroGamers = 0, vehiculosTotales = 0, tipoCreacion, personasEnCombate = 0, numeroArmas = 0;
 
     private ArrayList<Persona> gamer = new ArrayList<Persona>();
     private Ventana v1 = new Ventana(this);
@@ -18,6 +18,7 @@ public class Juego {
     private ArrayList<Vehiculo> todosLosVehiculos = new ArrayList<Vehiculo>();
     private ArrayList<Persona> personasEnJuego = new ArrayList<Persona>();
     private ArrayList<Arma> armasEnVenta = new ArrayList<Arma>();
+    private Tienda store;
 
 
     //VENTANA DE INICIO
@@ -123,6 +124,14 @@ public class Juego {
 
         gamer.get(posGamer).setVehiculo(todosLosVehiculos.get(posVeh));
 
+    }
+
+    public int getCantidadDeVehiculos(int posJ){
+        return gamer.get(posJ).getCantidadDeVehiculos();
+    }
+
+    public String getNombreDeVehiculo(int posJ, int posV){
+        return gamer.get(posJ).getNombreDeVehiculo(posV);
     }
 
     public void desplazarVehiculo(int posVeh){
@@ -258,6 +267,19 @@ public class Juego {
 
     public void agregarArmaATienda(String nombre, double daño, double punteria, double precio){
         armasEnVenta.add(new Arma(nombre, daño, punteria, precio));
+        numeroArmas++;
     }
 
+    public int getNumeroArmas() {
+        return numeroArmas;
+    }
+
+    public void abrirTienda(){
+        store = new Tienda(this);
+        store.setVisible(true);
+    }
+
+    public void cerrarTienda(){
+        store.setVisible(false);
+    }
 }

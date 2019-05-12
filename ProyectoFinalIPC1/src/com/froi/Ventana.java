@@ -263,7 +263,8 @@ public class Ventana extends JFrame {
         tienda.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                j1.abrirTienda();
+                j1.cerrarVentanaInicio();
             }
         });
 
