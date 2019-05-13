@@ -43,4 +43,8 @@ public class Vehiculo{
     public void setArma(Arma arma) {
         this.arma = arma;
     }
+
+    public Arma getArma(){
+        return arma;
+    }
 }

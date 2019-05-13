@@ -10,7 +10,6 @@ public class Persona {
     private int XP = 0, nivel = 1, siguienteNivel = 2, XPnextLevel = 5;
     private double dinero = 200;
     private ArrayList<Vehiculo> veh = new ArrayList<Vehiculo>();
-    private ArrayList<Arma> arm = new ArrayList<Arma>();
 
     public Persona (String nombres, String apellidos, int edad){
 
@@ -70,8 +69,8 @@ public class Persona {
         return veh.get(posicion);
     }
 
-    public void setDinero(int dinero) {
-        this.dinero = dinero;
+    public void setDinero(double dinero) {
+        this.dinero = this.dinero - dinero;
     }
 
     public double getDinero() {
@@ -80,6 +79,7 @@ public class Persona {
 
     public void agregarBoot(){
         cantBoots++;
+        System.out.println("BOOT AGREGADO");
     }
 
     public void quitarBoot(){
@@ -92,5 +92,10 @@ public class Persona {
 
     public void cambiarPosicion(int posVo, int posVf, Vehiculo vh){
 
+
+    }
+
+    public void setAV(int posV, Arma arma){
+        veh.get(posV).setArma(arma);
     }
 }

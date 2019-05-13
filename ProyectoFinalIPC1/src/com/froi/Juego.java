@@ -182,6 +182,10 @@ public class Juego {
 
     }
 
+    public int getTipoDeVehiculo(int posicion){
+        return todosLosVehiculos.get(posicion).getTipo();
+    }
+
     public String getNombre(int posicion){
 
         return todosLosVehiculos.get(posicion).getNombre();
@@ -270,6 +274,7 @@ public class Juego {
         numeroArmas++;
     }
 
+    //Tienda
     public int getNumeroArmas() {
         return numeroArmas;
     }
@@ -279,7 +284,38 @@ public class Juego {
         store.setVisible(true);
     }
 
+    public double getDinero(int posJ){
+        return gamer.get(posJ).getDinero();
+    }
+
+    public String getNombreArma(int pos){
+        return armasEnVenta.get(pos).getNombre();
+    }
+
+    public double getPrecioArma(int pos){
+        return armasEnVenta.get(pos).getPrecio();
+    }
+
+    public void agregarBoot(int pos){
+        gamer.get(pos).agregarBoot();
+    }
+
+    public void setAG(int posJ, int posV, int posA){
+        gamer.get(posJ).setAV(posV, armasEnVenta.get(posA));
+    }
+
+    public void desplazarArmas(int posA){
+        armasEnVenta.remove(posA);
+        numeroArmas--;
+        System.out.println("Armas: " + numeroArmas);
+    }
+
+    public void comprar(int posJ, double dinero) {
+        gamer.get(posJ).setDinero(dinero);
+    }
+
     public void cerrarTienda(){
         store.setVisible(false);
+        store = null;
     }
 }
