@@ -236,6 +236,12 @@ public class Juego {
 
     }
 
+    public int getTipoDeVehiculoCombate(int posJ, int posV){
+        return personasEnJuego.get(posJ).getVehiculo(posV).getTipo();
+    }
+
+
+
     public int getNumVehi(int posicion) {
         return personasEnJuego.get(posicion).getCantVeh();
     }

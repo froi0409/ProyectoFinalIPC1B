@@ -7,6 +7,7 @@ public class Tanque extends Vehiculo {
         setAtaque(10);
         setAtaque(6);
         setPunteria(60);
+        setTipo(4);
 
     }
 

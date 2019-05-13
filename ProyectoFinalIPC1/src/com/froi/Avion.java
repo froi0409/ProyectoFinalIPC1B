@@ -9,6 +9,7 @@ public class Avion extends Vehiculo {
         setAtaque(7);
         setDefensa(3);
         setPunteria(70);
+        setTipo(5);
         this.velocidad = 1;
 
     }

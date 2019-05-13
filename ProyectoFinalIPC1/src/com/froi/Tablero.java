@@ -8,12 +8,13 @@ import javax.swing.*;
 
 public class Tablero extends JFrame {
 
-    Juego j1;
-    private Posicion[][] posicion;
-    private int [][] objeto;
-    private int rangox, rangoy, modoDeJuego;
+    private Juego j1;
+    protected Posicion[][] posicion;
+    protected int [][] objeto;
+    protected int rangox, rangoy, modoDeJuego, vehiculoActivo1 = 0, jugador = 0;
     private JPanel panelBatalla = new JPanel();
     private JButton prueba, prueba2;
+    private Dado dado;
     private ImageIcon normal = new ImageIcon("fondos/normal.jpg");
     private ImageIcon montaña = new ImageIcon("iconos/montañas.png");
     private ImageIcon fondoMontaña = new ImageIcon("fondos/fondomontaña.jpg");
@@ -32,6 +33,7 @@ public class Tablero extends JFrame {
         this.rangox = rangox;
         this.rangoy = rangoy;
         this.modoDeJuego = modoDeJuego;
+        objeto = new int[rangox][rangoy];
 
         this.setSize(675,475);
         this.setTitle("BATTLE OF HONOR");
@@ -113,7 +115,9 @@ public class Tablero extends JFrame {
         for (int j = 0; j < rangoy; j++){
             for (int i = 0; i < rangox; i++){
 
-                if (objeto[i][j] == 3) {
+                posicion[i][j].setEnabled(true);
+
+                if (posicion[i][j].getObjeto() == 3) {
                     posicion[i][j].setBackground(Color.lightGray);
                     posicion[i][j].setIcon(new ImageIcon(enemigo.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                 }
@@ -123,6 +127,7 @@ public class Tablero extends JFrame {
                 }
                 else if (objeto[i][j] == 5) {
                     posicion[i][j].setBackground(Color.WHITE);
+                    System.out.println();
                     posicion[i][j].setIcon(new ImageIcon(avion.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                 }
                 else if (objeto[i][j] == 6) {
@@ -136,7 +141,7 @@ public class Tablero extends JFrame {
                 else if (posicion[i][j].getObjeto() == 8) {
                     posicion[i][j].setBackground(Color.WHITE);
                 }
-                else if (objeto[i][j] == 0) {
+                else if (posicion[i][j].getObjeto() == 0) {
                     posicion[i][j].setIcon(new ImageIcon(normal.getImage().getScaledInstance(375/rangox, 375/rangoy, Image.SCALE_SMOOTH)));
                 }
                 else if (posicion[i][j].getObjeto() == 1) {
@@ -157,9 +162,6 @@ public class Tablero extends JFrame {
         posicion = new Posicion[rangox][rangoy];
 
         Random rand = new Random();
-        boolean all = false;
-        int contEnemigo = 0, contSuperficie = 0;
-
 
         for (int j = 0; j < rangoy; j++){
             for (int i = 0; i < rangox; i++){
@@ -189,9 +191,13 @@ public class Tablero extends JFrame {
                     posicion[a + 1][b + 1].setObjeto(3);
 
         }
+        System.out.println(j1.getTipoDeVehiculoCombate(0, 0));
 
-        posicion[0][rangoy - 1].setObjeto(8);
 
+        objeto[0][rangoy - 1] = j1.getTipoDeVehiculoCombate(0, 0);
+        if (j1.getModoDeJuego() == 1){
+            objeto[rangox - 1][0] = j1.getTipoDeVehiculoCombate(1, 0);
+        }
     }
 
     private void oyenteDeAccion(){
@@ -208,8 +214,12 @@ public class Tablero extends JFrame {
 
                                 if (posicion[i][j] == e.getSource()){
                                     System.out.println(i + "   " + j);
+                                    if (objeto[i][j] == 4 || objeto[i][j] == 5) {
+                                        accion1(i, j);
+                                        posicion[i][j].setEnabled(false);
+                                    }
                                     if (posicion[i][j].getObjeto() == 3)
-                                    JOptionPane.showMessageDialog(null, ("Enemigo detectado en coordenadas ( "+i+" , "+j+" )"));
+                                        JOptionPane.showMessageDialog(null, ("Enemigo detectado en coordenadas ( "+i+" , "+j+" )"));
                                 }
 
                             }
@@ -229,7 +239,16 @@ public class Tablero extends JFrame {
 
     }
 
+    public void accion1(int x, int y){
 
+        int num;
+        dado = new Dado(6);
+        num = dado.getNumero();
+        hilo hh1 = new hilo(this, x, y, rangox, rangoy, num, j1);
+
+        hh1.run();
+
+    }
 
 
 }
