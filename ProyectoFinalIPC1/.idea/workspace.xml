@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee827cc3-3c4a-483c-a6b5-69abb3f3462e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/froi/Avion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/froi/Avion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/froi/CreacionDeJugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/froi/CreacionDeJugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/froi/Enemigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/froi/Enemigo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/froi/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/froi/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/froi/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/froi/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/froi/Tanque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/froi/Tanque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/froi/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/froi/Vehiculo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,26 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/froi/Juego.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
+            <state relative-caret-position="6030">
               <caret line="440" selection-start-line="440" selection-end-line="440" />
-              <folding>
-                <element signature="e#11176#11177#0" expanded="true" />
-                <element signature="e#11255#11256#0" expanded="true" />
-                <element signature="e#11411#11412#0" expanded="true" />
-                <element signature="e#11448#11449#0" expanded="true" />
-                <element signature="e#12194#12195#0" expanded="true" />
-                <element signature="e#12421#12422#0" expanded="true" />
-                <element signature="e#12471#12472#0" expanded="true" />
-                <element signature="e#12657#12658#0" expanded="true" />
-                <element signature="e#12713#12714#0" expanded="true" />
-                <element signature="e#12899#12900#0" expanded="true" />
-                <element signature="e#12955#12956#0" expanded="true" />
-                <element signature="e#13091#13092#0" expanded="true" />
-                <element signature="e#13135#13136#0" expanded="true" />
-                <element signature="e#13415#13416#0" expanded="true" />
-                <element signature="e#13482#13483#0" expanded="true" />
-                <element signature="e#14168#14169#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -64,7 +39,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/froi/CreacionDeJugador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
+            <state relative-caret-position="375">
               <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -90,19 +65,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/froi/Vehiculo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="270">
               <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="23" />
               <folding>
                 <element signature="e#439#440#0" expanded="true" />
                 <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#892#893#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
-                <element signature="e#1091#1092#0" expanded="true" />
-                <element signature="e#1106#1107#0" expanded="true" />
-                <element signature="e#1131#1132#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,15 +79,15 @@
         <entry file="file://$PROJECT_DIR$/src/com/froi/Avion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/froi/Tablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="1725">
               <caret line="251" column="51" selection-start-line="251" selection-start-column="51" selection-end-line="251" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -136,15 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/froi/Enemigo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-              <folding>
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#682#683#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="145">
+              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -333,23 +296,24 @@
       <workItem from="1557558697371" duration="39107000" />
       <workItem from="1557708858837" duration="21907000" />
       <workItem from="1557758933562" duration="6373000" />
+      <workItem from="1557776302980" duration="423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208654000" />
+    <option name="totallyTimeSpent" value="209077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="700" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17424242" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17727272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32924694" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32924694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39965096" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -560,6 +524,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/froi/Juego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6030">
+          <caret line="440" selection-start-line="440" selection-end-line="440" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/froi/CreacionDeJugador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#CreacionDeJugador#0;class#CreacionDeJugador#0" />
+            <element signature="method#panel#0;class#CreacionDeJugador#0" />
+            <element signature="method#botonesCrear#0;class#CreacionDeJugador#0" />
+            <element signature="method#textFieldsCrear#0;class#CreacionDeJugador#0" />
+            <element signature="method#labelsCrear#0;class#CreacionDeJugador#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/froi/Tanque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/froi/Vehiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="23" />
+          <folding>
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/froi/Avion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/froi/Dado.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -586,82 +597,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/froi/CreacionDeJugador.java">
+    <entry file="file://$PROJECT_DIR$/src/com/froi/Enemigo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CreacionDeJugador#0;class#CreacionDeJugador#0" />
-            <element signature="method#panel#0;class#CreacionDeJugador#0" />
-            <element signature="method#botonesCrear#0;class#CreacionDeJugador#0" />
-            <element signature="method#textFieldsCrear#0;class#CreacionDeJugador#0" />
-            <element signature="method#labelsCrear#0;class#CreacionDeJugador#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/froi/Tanque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/froi/Vehiculo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1131#1132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/froi/Avion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/froi/Juego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="440" selection-start-line="440" selection-end-line="440" />
-          <folding>
-            <element signature="e#11176#11177#0" expanded="true" />
-            <element signature="e#11255#11256#0" expanded="true" />
-            <element signature="e#11411#11412#0" expanded="true" />
-            <element signature="e#11448#11449#0" expanded="true" />
-            <element signature="e#12194#12195#0" expanded="true" />
-            <element signature="e#12421#12422#0" expanded="true" />
-            <element signature="e#12471#12472#0" expanded="true" />
-            <element signature="e#12657#12658#0" expanded="true" />
-            <element signature="e#12713#12714#0" expanded="true" />
-            <element signature="e#12899#12900#0" expanded="true" />
-            <element signature="e#12955#12956#0" expanded="true" />
-            <element signature="e#13091#13092#0" expanded="true" />
-            <element signature="e#13135#13136#0" expanded="true" />
-            <element signature="e#13415#13416#0" expanded="true" />
-            <element signature="e#13482#13483#0" expanded="true" />
-            <element signature="e#14168#14169#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="145">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/froi/Tablero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="1725">
           <caret line="251" column="51" selection-start-line="251" selection-start-column="51" selection-end-line="251" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -672,17 +617,6 @@
             <element signature="method#agregarObjetos#0;class#Tablero#0" />
             <element signature="method#accion1#0;class#Tablero#0" />
             <element signature="method#movimiento#0;class#Tablero#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/froi/Enemigo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-          <folding>
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
           </folding>
         </state>
       </provider>
