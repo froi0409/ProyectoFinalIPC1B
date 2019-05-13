@@ -62,7 +62,6 @@ public class CreacionDeJugador extends JFrame {
                     }
                     else {
                         j1.crearJugador(nom, ape, age);
-                        j1.getGamer(j1.getNumeroGamers() - 1);
 
                         textnombre.setText("");
                         textapellidos.setText("");

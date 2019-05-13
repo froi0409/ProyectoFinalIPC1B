@@ -21,7 +21,7 @@ public class hilo extends Thread {
         this.y = y;
         this.rangox = rangox;
         this.rangoy = rangoy;
-        this.dado = dado;
+        this.dado = dado + 1;
         xizquierda = x; xderecha = x;
         yarriba = y; yabajo = y;
 
@@ -53,7 +53,7 @@ public class hilo extends Thread {
                         if (tablero.posicion[xizquierda][y].getObjeto() != 2){
 
                             tablero.posicion[xizquierda][y].setIcon(new ImageIcon(movimiento.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
-
+                            tablero.mov[xizquierda][y] = 9;
 
                         }
                         else{
@@ -66,6 +66,7 @@ public class hilo extends Thread {
                     else{
 
                         if (tablero.posicion[xizquierda][y].getObjeto() != 1){
+                            tablero.mov[xizquierda][y] = 9;
                             tablero.posicion[xizquierda][y].setIcon(new ImageIcon(movimiento.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                         }
                         else{
@@ -83,6 +84,7 @@ public class hilo extends Thread {
                             bxderecha = true;
                         }
                         else{
+                            tablero.mov[xderecha][y] = 9;
                             tablero.posicion[xderecha][y].setIcon(new ImageIcon(movimiento.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                         }
                     }
@@ -91,6 +93,7 @@ public class hilo extends Thread {
                             bxderecha = true;
                         }
                         else{
+                            tablero.mov[xderecha][y] = 9;
                             tablero.posicion[xderecha][y].setIcon(new ImageIcon(movimiento.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                         }
                     }
@@ -104,6 +107,7 @@ public class hilo extends Thread {
                             System.out.println();
                         }
                         else{
+                            tablero.mov[x][yarriba] = 9;
                             tablero.posicion[x][yarriba].setIcon(new ImageIcon(movimiento.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                         }
                     }
@@ -113,6 +117,7 @@ public class hilo extends Thread {
                         }
                         else {
                             System.out.println();
+                            tablero.mov[x][yarriba] = 9;
                             tablero.posicion[x][yarriba].setIcon(new ImageIcon(movimiento.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                         }
                     }
@@ -128,6 +133,7 @@ public class hilo extends Thread {
                             System.out.println();
                         }
                         else{
+                            tablero.mov[x][yabajo] = 9;
                             tablero.posicion[x][yabajo].setIcon(new ImageIcon(movimiento.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                         }
                     }
@@ -136,6 +142,7 @@ public class hilo extends Thread {
                             byabajo = true;
                         }
                         else{
+                            tablero.mov[x][yabajo] = 9;
                             System.out.println();
                             tablero.posicion[x][yabajo].setIcon(new ImageIcon(movimiento.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
                         }

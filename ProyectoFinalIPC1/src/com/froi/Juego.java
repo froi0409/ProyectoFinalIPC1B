@@ -22,33 +22,59 @@ public class Juego {
 
 
     //VENTANA DE INICIO
+
+    /**
+     * Constructor juego (sin parametros).
+     */
     public Juego() {
 
 
     }
 
+
+    /**
+     * abre la ventana de inicio
+     */
     public void jugar (){
 
         v1.setVisible(true);
 
     }
 
+    /**
+     * cierra la ventana de inicio
+     */
     public void cerrarVentanaInicio(){
 
         v1.setVisible(false);
 
     }
 
+    /**
+     * nos permite indicar el modo de juego
+     * @param modoDeJuego 0-un jugador, 1-dos jugadores
+     */
     public void setModoDeJuego(int modoDeJuego){
         this.modoDeJuego = modoDeJuego;
     }
 
+    /**
+     * Nos devuelve el modo de juego
+     * @return -devuelve el modo de juego
+     */
     public int getModoDeJuego(){
         return modoDeJuego;
     }
 
 
     //TABLERO
+
+    /**
+     * Da inicio al juego poniendo un tablero
+     * @param rangox -El rango del tablero en x
+     * @param rangoy -El rango del tablero en y
+     * @param modoDeJuego -El modo de juego
+     */
     public void abirTablero(int rangox, int rangoy, int modoDeJuego) {
 
         this.rangox = rangox;
@@ -61,6 +87,9 @@ public class Juego {
 
     }
 
+    /**
+     * termina el juego cerrando el tablero
+     */
     public void cerrarTablero() {
 
         t1.setVisible(false);
@@ -69,18 +98,31 @@ public class Juego {
 
 
     //CARACTERISTICAS DE JUGADORES
+
+    /**
+     * Abre la ventana de creación de jugador
+     */
     public void abrirCrearJugador(){
 
         c1.setVisible(true);
 
     } //ventana
 
+    /**
+     * cierra la ventana de creación de jugador
+     */
     public void cerrarCrearJugador(){
 
         c1.setVisible(false);
 
     }
 
+    /**
+     * crea un jugador
+     * @param nombre -Nombre
+     * @param apellido -Apellidos
+     * @param edad -Edad
+     */
     public void crearJugador(String nombre, String apellido, int edad){
 
         gamer.add(new Persona(nombre, apellido, edad));
@@ -88,33 +130,55 @@ public class Juego {
 
     } //Caracteristicas
 
+    /**
+     * Devuelve el nombre del jugador
+     * @param posicion -Posición en el ArrayList
+     * @return -Nombre del jugador
+     */
     public String getGamerNombre(int posicion){
         return gamer.get(posicion).getNombres();
     }
 
+    /**
+     * devuelve los apellidos del jugador
+     * @param posicion -Posición en ArrayList
+     * @return Apellidos
+     */
     public String getGamerApellidos (int posicion){
         return gamer.get(posicion).getNombres();
     }
 
+    /**
+     * Devuelve la edad del jugador
+     * @param posicion -Posición en ArrayList
+     * @return -Edad
+     */
     public int getGamerEdad (int posicion){
         return gamer.get(posicion).getEdad();
     }
 
-    public void getGamer(int posicion){
-
-        System.out.println("Nombre: " + gamer.get(posicion).getNombres() + " " + gamer.get(posicion).getApellidos());
-        System.out.println("Edad: " + gamer.get(posicion).getEdad());
-
-    }
-
+    /**
+     * Devuelve el número de jugadores creados
+     * @return -Numero de jugadores creados
+     */
     public int getNumeroGamers() {
         return numeroGamers;
     }
 
+    /**
+     * devuelve la cantidad de vehiculos que tiene un jugador en específico
+     * @param posicion -Posición del jugador en ArrayList
+     * @return -Cantidad de vehículos del jugador
+     */
     public int getCantVehi(int posicion){
         return gamer.get(posicion).getCantVeh();
     }
 
+    /**
+     * Le dá un vehículo al jugador
+     * @param posGamer -Posición del jugador en ArrayList
+     * @param posVeh -Posición del vehículo en ArrayList
+     */
     public void setVG(int posGamer, int posVeh){
 
         int a;
@@ -126,14 +190,29 @@ public class Juego {
 
     }
 
+    /**
+     * Devuelve la cantidad de vehículos de un jugador en específico
+     * @param posJ -Posición de jugador en ArrayList
+     * @return -Cantidad de vehículos
+     */
     public int getCantidadDeVehiculos(int posJ){
         return gamer.get(posJ).getCantidadDeVehiculos();
     }
 
+    /**
+     * Devuelve el nombre de algún vehículo de un jugador en especifico
+     * @param posJ -posición de jugador en arraylist
+     * @param posV -posición del vehículo en arraylist
+     * @return -nombre del vehículo
+     */
     public String getNombreDeVehiculo(int posJ, int posV){
         return gamer.get(posJ).getNombreDeVehiculo(posV);
     }
 
+    /**
+     * Elimina el vehículo del arraylist principal
+     * @param posVeh -posición del vehículo
+     */
     public void desplazarVehiculo(int posVeh){
 
         todosLosVehiculos.remove(posVeh);
@@ -144,22 +223,42 @@ public class Juego {
 
 
     //CARACTERISTICAS DE VEHICULOS
+
+    /**
+     * abre la ventana para la creación de un vehículo
+     */
     public void abrirCreacionDeVehiculos(){
         cv1.setVisible(true);
     }
 
+    /**
+     * cierra la ventana para la creación de un vehículo
+     */
     public void cerrarCreacionDeVehiculos() {
         cv1.setVisible(false);
     }
 
+    /**
+     * Inidica si la creación del vehiculo se da por necesidad de vehículos a la hora de que se crea un jugador, o si es creación voluntaria
+     * @param tipo -tipo de creación
+     */
     public void setTipoCreacion(int tipo){
         cv1.setTipoCreacion(tipo);
     }
 
+    /**
+     * devuelve el tipo de creación del vehículo
+     * @return -tipo de creación de vehículo
+     */
     public int getTipoCreacion() {
         return tipoCreacion;
     }
 
+    /**
+     * Crea un vehículo nuevo
+     * @param nombre -Nombre del vehículo
+     * @param tipo -Tipo del vehículo
+     */
     public void creacionDeVehiculo(String nombre, int tipo){
 
         if (tipo == 4){
@@ -176,55 +275,88 @@ public class Juego {
 
     }
 
+    /**
+     * Imprime en consola el los datos del vehículo (para fines desarrollativos)
+     * @param posicion -posición de vehículo en arraylist principal
+     */
     public void getVehiculo(int posicion){
 
         System.out.println(todosLosVehiculos.get(posicion).getNombre() + " " + todosLosVehiculos.get(posicion).getTipo());
 
     }
 
+    /**
+     * devuelve el tipo del vehículo
+     * @param posicion -posición del vehículo en ArrayList
+     * @return -tipo de vehículo
+     */
     public int getTipoDeVehiculo(int posicion){
         return todosLosVehiculos.get(posicion).getTipo();
     }
 
+    /**
+     * Devuelve el nombre del vehículo en el ArrayList
+     * @param posicion -posición del vehículo en ArrayList
+     * @return -nombre del vehículo
+     */
     public String getNombre(int posicion){
 
         return todosLosVehiculos.get(posicion).getNombre();
 
     }
 
-    public void setVehiculosTotales(int vehiculosTotales){
-        this.vehiculosTotales = vehiculosTotales;
-    }
-
+    /**
+     * Devuelve el número total de vehículos creados (No dados a un jugador)
+     * @return -número de vehículos
+     */
     public int getVehiculosTotales(){
         return vehiculosTotales;
     }
 
 
     //SELECCION DE VEHICULO
+
+    /**
+     * Abre la selección de vehículos
+     */
     public void abrirSeleccionDeVehiculos(){
 
         sv1 = new SeleccionDeVehiculos(this);
         sv1.setVisible(true);
     }
 
+    /**
+     * cierra la creación de vehículos
+     */
     public void cerrarSeleccionDeVehiculos(){
         sv1.setVisible(false);
     }
 
 
     //SELECCION DE JUADOR
+
+    /**
+     * Abre la selección de jugador
+     */
     public void abrirSeleccionDeJugador(){
         sj1 = new SeleccionDeJugador(this);
         sj1.setVisible(true);
     }
 
+    /**
+     * cierra la selección de jugador
+     */
     public void cerrarSeleccionDeJugador(){
         sj1.setVisible(false);
     }
 
 
     //COMBATE
+
+    /**
+     * Agrega jugador al combate
+     * @param pos -posición del jugador en ArrayList
+     */
     public void agregarAlCombate(int pos){
         personasEnJuego.add(gamer.get(pos));
         personasEnCombate++;

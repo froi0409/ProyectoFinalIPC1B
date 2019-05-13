@@ -10,8 +10,8 @@ public class Tablero extends JFrame {
 
     private Juego j1;
     protected Posicion[][] posicion;
-    protected int [][] objeto;
-    protected int rangox, rangoy, modoDeJuego, vehiculoActivo1 = 0, jugador = 0;
+    protected int [][] objeto, mov;
+    protected int rangox, rangoy, modoDeJuego, vehiculoActivo1 = 0, jugador = 0, detx, dety;
     private JPanel panelBatalla = new JPanel();
     private JButton prueba, prueba2;
     private Dado dado;
@@ -34,6 +34,7 @@ public class Tablero extends JFrame {
         this.rangoy = rangoy;
         this.modoDeJuego = modoDeJuego;
         objeto = new int[rangox][rangoy];
+        mov = new int[rangox][rangoy];
 
         this.setSize(675,475);
         this.setTitle("BATTLE OF HONOR");
@@ -217,6 +218,11 @@ public class Tablero extends JFrame {
                                     if (objeto[i][j] == 4 || objeto[i][j] == 5) {
                                         accion1(i, j);
                                         posicion[i][j].setEnabled(false);
+                                        detx = i;
+                                        dety = j;
+                                    }
+                                    else{
+                                        movimiento(i, j, detx, dety);
                                     }
                                     if (posicion[i][j].getObjeto() == 3)
                                         JOptionPane.showMessageDialog(null, ("Enemigo detectado en coordenadas ( "+i+" , "+j+" )"));
@@ -247,6 +253,18 @@ public class Tablero extends JFrame {
         hilo hh1 = new hilo(this, x, y, rangox, rangoy, num, j1);
 
         hh1.run();
+
+    }
+
+    public void movimiento(int x, int y, int xo, int yo){
+
+                if (mov[x][y] == 9){
+
+                    objeto[x][y] = objeto[xo][yo];
+                    objeto[xo][yo] = posicion[xo][yo].getObjeto();
+                    pintarEscenario();
+
+                }
 
     }
 
