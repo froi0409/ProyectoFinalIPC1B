@@ -3,7 +3,7 @@ package com.froi;
 public class Vehiculo{
 
     private String nombre;
-    private double HP = 50, PP = 5, ataque, defensa, punteria, nivel = 1, XP = 0;
+    private double HP = 50, PP = 5, ataque = 0, defensa = 0, punteria = 0, nivel = 1, XP = 0;
     private int tipo;
     private Arma arma;
 
@@ -13,15 +13,15 @@ public class Vehiculo{
     }
 
     public void setAtaque(double ataque) {
-        this.ataque = ataque;
+        this.ataque += ataque;
     }
 
     public void setDefensa(double defensa) {
-        this.defensa = defensa;
+        this.defensa += defensa;
     }
 
     public void setPunteria(double punteria) {
-        this.punteria = punteria;
+        this.punteria += punteria;
     }
 
     public void setTipo(int tipo) {
@@ -42,6 +42,14 @@ public class Vehiculo{
 
     public void setArma(Arma arma) {
         this.arma = arma;
+    }
+
+    public double getAtaque() {
+        return ataque;
+    }
+
+    public double getPunteria() {
+        return punteria;
     }
 
     public Arma getArma(){

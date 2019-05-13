@@ -20,4 +20,11 @@ public class Arma {
     public double getPrecio(){
         return precio;
     }
+
+    public double getDaño() {
+        return daño;
+    }
+    public double getPunteria(){
+        return punteria;
+    }
 }

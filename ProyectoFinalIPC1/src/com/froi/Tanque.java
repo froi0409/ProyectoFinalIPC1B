@@ -10,4 +10,10 @@ public class Tanque extends Vehiculo {
 
     }
 
+    @Override
+    public void setArma(Arma arma) {
+        super.setArma(arma);
+        setAtaque((getAtaque() + arma.getDaño()));
+        setPunteria(getPunteria() + arma.getPunteria());
+    }
 }

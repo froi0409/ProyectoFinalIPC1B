@@ -10,6 +10,7 @@ public class Tablero extends JFrame {
 
     Juego j1;
     private Posicion[][] posicion;
+    private int [][] objeto;
     private int rangox, rangoy, modoDeJuego;
     private JPanel panelBatalla = new JPanel();
     private JButton prueba, prueba2;
@@ -112,7 +113,30 @@ public class Tablero extends JFrame {
         for (int j = 0; j < rangoy; j++){
             for (int i = 0; i < rangox; i++){
 
-                if (posicion[i][j].getObjeto() == 0) {
+                if (objeto[i][j] == 3) {
+                    posicion[i][j].setBackground(Color.lightGray);
+                    posicion[i][j].setIcon(new ImageIcon(enemigo.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
+                }
+                else if (objeto[i][j] == 4) {
+                    posicion[i][j].setBackground(Color.WHITE);
+                    posicion[i][j].setIcon(new ImageIcon(tanque.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
+                }
+                else if (objeto[i][j] == 5) {
+                    posicion[i][j].setBackground(Color.WHITE);
+                    posicion[i][j].setIcon(new ImageIcon(avion.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
+                }
+                else if (objeto[i][j] == 6) {
+                    posicion[i][j].setBackground(Color.PINK);
+                    posicion[i][j].setIcon(new ImageIcon(boot.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
+                }
+                else if (objeto[i][j] == 7) {
+                    posicion[i][j].setBackground(Color.orange);
+                    posicion[i][j].setIcon(new ImageIcon(comodin.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
+                }
+                else if (posicion[i][j].getObjeto() == 8) {
+                    posicion[i][j].setBackground(Color.WHITE);
+                }
+                else if (objeto[i][j] == 0) {
                     posicion[i][j].setIcon(new ImageIcon(normal.getImage().getScaledInstance(375/rangox, 375/rangoy, Image.SCALE_SMOOTH)));
                 }
                 else if (posicion[i][j].getObjeto() == 1) {
@@ -121,29 +145,6 @@ public class Tablero extends JFrame {
                 }
                 else if (posicion[i][j].getObjeto() == 2) {
                     posicion[i][j].setIcon(new ImageIcon(fondoAgua.getImage().getScaledInstance(375/rangox, 375/rangoy, Image.SCALE_SMOOTH)));
-                }
-                else if (posicion[i][j].getObjeto() == 3) {
-                    posicion[i][j].setBackground(Color.lightGray);
-                    posicion[i][j].setIcon(new ImageIcon(enemigo.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
-                }
-                else if (posicion[i][j].getObjeto() == 4) {
-                    posicion[i][j].setBackground(Color.WHITE);
-                    posicion[i][j].setIcon(new ImageIcon(tanque.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
-                }
-                else if (posicion[i][j].getObjeto() == 5) {
-                    posicion[i][j].setBackground(Color.WHITE);
-                    posicion[i][j].setIcon(new ImageIcon(avion.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
-                }
-                else if (posicion[i][j].getObjeto() == 6) {
-                    posicion[i][j].setBackground(Color.PINK);
-                    posicion[i][j].setIcon(new ImageIcon(boot.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
-                }
-                else if (posicion[i][j].getObjeto() == 7) {
-                    posicion[i][j].setBackground(Color.orange);
-                    posicion[i][j].setIcon(new ImageIcon(comodin.getImage().getScaledInstance(375/rangox, 375/(rangox + 1), Image.SCALE_SMOOTH)));
-                }
-                else if (posicion[i][j].getObjeto() == 8) {
-                    posicion[i][j].setBackground(Color.WHITE);
                 }
 
             }
