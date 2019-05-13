@@ -14,6 +14,10 @@ public class CreacionDeJugador extends JFrame {
     private JLabel nombres, apellidos, edad, principal;
     private JTextField textnombre, textapellidos, textedad;
 
+    /**
+     * constructor de Creación de jugador
+     * @param j1 -Crea instancia a clase mayor
+     */
     public CreacionDeJugador(Juego j1){
 
         this.j1 = j1;
@@ -37,6 +41,9 @@ public class CreacionDeJugador extends JFrame {
 
     }
 
+    /**
+     * Crea jugadores
+     */
     public void botonesCrear(){
 
         //configuracion de boton

@@ -20,6 +20,10 @@ public class Vehiculo{
         this.defensa += defensa;
     }
 
+    public double getDefensa() {
+        return defensa;
+    }
+
     public void setPunteria(double punteria) {
         this.punteria += punteria;
     }
@@ -54,5 +58,13 @@ public class Vehiculo{
 
     public Arma getArma(){
         return arma;
+    }
+
+    public void setHP(double daño) {
+        this.HP = this.HP - daño;
+    }
+
+    public double getHP() {
+        return HP;
     }
 }

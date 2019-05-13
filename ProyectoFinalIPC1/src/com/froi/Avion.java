@@ -14,6 +14,10 @@ public class Avion extends Vehiculo {
 
     }
 
+    /**
+     * Otorga arma a vehículo (para aumentar atributos)
+     * @param arma -Arma a ingresar
+     */
     @Override
     public void setArma(Arma arma) {
         super.setArma(arma);

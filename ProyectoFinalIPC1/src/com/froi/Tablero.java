@@ -8,12 +8,13 @@ import javax.swing.*;
 
 public class Tablero extends JFrame {
 
-    private Juego j1;
+    protected Juego j1;
     protected Posicion[][] posicion;
     protected int [][] objeto, mov;
     protected int rangox, rangoy, modoDeJuego, vehiculoActivo1 = 0, jugador = 0, detx, dety;
     private JPanel panelBatalla = new JPanel();
     private JButton prueba, prueba2;
+    protected JButton[] vehiculos = new JButton[3];
     private Dado dado;
     private ImageIcon normal = new ImageIcon("fondos/normal.jpg");
     private ImageIcon montaña = new ImageIcon("iconos/montañas.png");
@@ -24,12 +25,19 @@ public class Tablero extends JFrame {
     private ImageIcon avion = new ImageIcon("iconos/avion.png");
     private ImageIcon boot = new ImageIcon("iconos/boot.png");
     private ImageIcon comodin = new ImageIcon("iconos/comodin.png");
+    protected Enemigo[] enemigos = new Enemigo[3];
 
 
+    /**
+     * Constructor de Tablero
+     * @param rangox -Asigna la cantidad de cuadros que tendrá en X
+     * @param rangoy -Asigna la cantidad de cuadros que tendrá en Y
+     * @param modoDeJuego -Establece el modo de juego
+     * @param j1 -Instancia a clase mayor
+     */
     public Tablero(int rangox, int rangoy, int modoDeJuego, Juego j1){
 
         this.j1 = j1;
-
         this.rangox = rangox;
         this.rangoy = rangoy;
         this.modoDeJuego = modoDeJuego;
@@ -68,6 +76,10 @@ public class Tablero extends JFrame {
 
     }
 
+    /**
+     * Agrega botones de interacción
+     * En especial el tablero
+     */
     private void agregarBotonesBatalla() {
 
         int x = 25, y = 25;
@@ -111,6 +123,9 @@ public class Tablero extends JFrame {
 
     }
 
+    /**
+     * Asigna aspecto visual a los botones del tablero
+     */
     private void pintarEscenario(){
 
         for (int j = 0; j < rangoy; j++){
@@ -158,6 +173,10 @@ public class Tablero extends JFrame {
 
     }
 
+    /**
+     * Inicializa y determina el tipo de terreno que tendrá cada cuadro del tablero.
+     * Inicializa y determina la posición de los enemigos
+     */
     private void inicializacionDeObjetos(){
 
         posicion = new Posicion[rangox][rangoy];
@@ -190,6 +209,7 @@ public class Tablero extends JFrame {
                 int a = rand.nextInt(rangox - 2), b = rand.nextInt(rangoy - 2);
 
                     posicion[a + 1][b + 1].setObjeto(3);
+                    enemigos[i] = new Enemigo(this, a+1, b+1, i);
 
         }
         System.out.println(j1.getTipoDeVehiculoCombate(0, 0));
@@ -201,6 +221,9 @@ public class Tablero extends JFrame {
         }
     }
 
+    /**
+     * Lee los 'click' que se le den al tablero
+     */
     private void oyenteDeAccion(){
 
         for (int l = 0; l < rangoy; l++){
@@ -226,6 +249,7 @@ public class Tablero extends JFrame {
                                     }
                                     if (posicion[i][j].getObjeto() == 3)
                                         JOptionPane.showMessageDialog(null, ("Enemigo detectado en coordenadas ( "+i+" , "+j+" )"));
+                                    turnoEnemigo();
                                 }
 
                             }
@@ -245,6 +269,11 @@ public class Tablero extends JFrame {
 
     }
 
+    /**
+     * Crea un hilo coloreando los espacios en los cuales se podrá mover el vehículo
+     * @param x
+     * @param y
+     */
     public void accion1(int x, int y){
 
         int num;
@@ -256,6 +285,13 @@ public class Tablero extends JFrame {
 
     }
 
+    /**
+     * Lleva a cabo el movimiento de un vehículo
+     * @param x -X final
+     * @param y -Y final
+     * @param xo -X inicial
+     * @param yo -Y final
+     */
     public void movimiento(int x, int y, int xo, int yo){
 
                 if (mov[x][y] == 9){
@@ -264,7 +300,25 @@ public class Tablero extends JFrame {
                     objeto[xo][yo] = posicion[xo][yo].getObjeto();
                     pintarEscenario();
 
+                    for (int j = 0; j < rangoy; j++){
+                        for (int i = 0; i < rangox; i++){
+
+                            mov[i][j] = 0;
+
+                        }
+                    }
+
                 }
+
+    }
+
+    public void turnoEnemigo(){
+
+        for(int i = 0; i < 3; i++){
+
+            enemigos[i].deteccionDeVehículos();
+
+        }
 
     }
 
